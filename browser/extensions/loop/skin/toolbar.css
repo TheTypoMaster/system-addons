@@ -1,0 +1,45 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url("chrome://browser/content/browser.xul") {
+  body {
+    background-color: blue;
+  }
+  #loop-button {
+    list-style-image: url(chrome://loop/skin/osx/toolbar.png) !important;
+    -moz-image-region: rect(0, 18px, 18px, 0);
+  }
+  #loop-button[cui-areatype="menu-panel"],
+  toolbarpaletteitem[place="palette"] > #loop-button {
+    list-style-image: url(chrome://loop/skin/menuPanel.png);
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+  
+  /* Make sure that the state icons are not shown in the customization palette. */
+  toolbarpaletteitem[place="palette"] > #loop-button {
+    -moz-image-region: rect(0, 32px, 32px, 0) !important;
+  }
+  
+  #loop-button[cui-areatype="menu-panel"][state="disabled"],
+  #loop-button[cui-areatype="menu-panel"][disabled="true"] {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+  
+  #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="error"] {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
+  
+  #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"] {
+    -moz-image-region: rect(0, 128px, 32px, 96px);
+  }
+  
+  #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) {
+    -moz-image-region: rect(0, 160px, 32px, 128px);
+  }
+  
+  #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"] {
+    -moz-image-region: rect(0, 192px, 32px, 160px);
+  }
+  
+  #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) {
+    -moz-image-region: rect(0, 224px, 32px, 192px);
+  }
+}
