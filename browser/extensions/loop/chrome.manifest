@@ -1,0 +1,4 @@
+content loop content/
+resource loop ./
+locale loop en-US locale/en-US/
+skin loop classic/1.0 skin/
