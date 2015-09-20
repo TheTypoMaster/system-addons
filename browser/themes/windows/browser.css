@@ -636,20 +636,12 @@ menuitem.bookmark-item {
     list-style-image: url("chrome://browser/skin/Toolbar-lunaSilver.png");
   }
 
-  #loop-button {
-    list-style-image: url(chrome://browser/skin/loop/toolbar-lunaSilver.png)
-  }
-
   #PanelUI-menu-button.thumburger {
     list-style-image: url("chrome://browser/skin/customizableui/thumburger-lunaSilver.png") !important;
   }
 }
 
 @media (-moz-windows-theme: luna-silver) and (min-resolution: 1.1dppx) {
-  #loop-button {
-    list-style-image: url(chrome://browser/skin/loop/toolbar-lunaSilver@2x.png)
-  }
-
   #PanelUI-menu-button.thumburger {
     list-style-image: url("chrome://browser/skin/customizableui/thumburger-lunaSilver@2x.png") !important;
   }

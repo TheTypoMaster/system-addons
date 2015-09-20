@@ -205,7 +205,6 @@ var CustomizableUIInternal = {
       "bookmarks-menu-button",
       "downloads-button",
       "home-button",
-      "loop-button",
     ];
 
     // Insert the Pocket button after the bookmarks button if it's present.
