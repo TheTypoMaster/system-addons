@@ -30,7 +30,7 @@ tasks:
         - "-c"
         # FIXME support checkout-pull-request bash function in the desktop-build image
         #- "checkout-pull-request && ./mach build"
-        - "git clone https://github.com/mozilla/system-addons && cd system-addons && ./mach build"
+        - "git clone https://github.com/mozilla/system-addons && cd system-addons && ../bin/build.sh"
     # Each task also requires explicit metadata
     metadata:
       name: "TaskCluster GitHub Tests"
