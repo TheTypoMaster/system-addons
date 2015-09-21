@@ -22,9 +22,9 @@ tasks:
           - pull_request.synchronize
           - pull_request.reopened
     payload:
-      maxRunTime: 3600                          # Job timeout, in seconds
-      image: "quay.io/mrrrgn/desktop-build"     # Our docker container (if using docker)
-      command:                                  # A command to run, list entries are arguments
+      maxRunTime: 3600                            # Job timeout, in seconds
+      image: "quay.io/taskcluster/desktop-build"  # Our docker container (if using docker)
+      command:                                    # A command to run, list entries are arguments
         - "/bin/bash"
         - "--login"
         - "-c"
