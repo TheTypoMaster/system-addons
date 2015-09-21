@@ -23,12 +23,14 @@ tasks:
           - pull_request.reopened
     payload:
       maxRunTime: 3600                          # Job timeout, in seconds
-      image: "taskcluster/desktop-build"        # Our docker container (if using docker)
+      image: "quay.io/mrrrgn/desktop-build"     # Our docker container (if using docker)
       command:                                  # A command to run, list entries are arguments
         - "/bin/bash"
         - "--login"
         - "-c"
-        - "checkout-pull-request && ./mach build"
+        # FIXME support checkout-pull-request bash function in the desktop-build image
+        #- "checkout-pull-request && ./mach build"
+        - "git clone https://github.com/mozilla/system-addons && cd system-addons && ./mach build"
     # Each task also requires explicit metadata
     metadata:
       name: "TaskCluster GitHub Tests"
