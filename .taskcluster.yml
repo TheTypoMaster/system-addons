@@ -23,7 +23,7 @@ tasks:
           - pull_request.reopened
     payload:
       maxRunTime: 3600                          # Job timeout, in seconds
-      image: "quay.io/mrrrgn/ubuntu-ci:0.0.1"   # Our docker container (if using docker)
+      image: "quay.io/mrrrgn/desktop-build"     # Our docker container (if using docker)
       command:                                  # A command to run, list entries are arguments
         - "/bin/bash"
         - "--login"
